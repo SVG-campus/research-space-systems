@@ -1,6 +1,6 @@
 # Pillar progress — `research-space-systems`
 
-**Overall solution proximity (rubric): ~20%** (speculative systems need physical constants + feasibility gates).
+**Overall solution proximity (rubric): ~22%** (speculative systems need physical constants + feasibility gates).
 
 See: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
 
@@ -8,7 +8,7 @@ See: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apr
 |------|---:|------|
 | Charter + prereg | 35 | Kardashev framing needs explicit measurable milestones |
 | Layer A / nulls | 12 | Mostly scenario math; statistical nulls secondary |
-| Reproducibility | 38 | Submodule CI |
+| Reproducibility | **41** | `runs/smoke.yaml` |
 | Domain data | 10 | Launch / catalog APIs not yet pinned |
 
 ## Links
