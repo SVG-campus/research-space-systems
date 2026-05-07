@@ -1,16 +1,22 @@
 # Pillar progress — `research-space-systems`
 
-**Overall solution proximity (rubric): ~22%** (speculative systems need physical constants + feasibility gates).
+**Overall solution proximity (rubric v2): ~50%** toward a defensible, preregistered answer for this pillar’s charter.
 
-See: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
+Formula (same as meta `docs/PILLAR_PROGRESS.md`): `round(0.30×charter + 0.30×LayerA + 0.25×repro + 0.15×data)` on 0–100 subscores.
+
+See the full rubric and sibling pillars: [meta `docs/PILLAR_PROGRESS.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PILLAR_PROGRESS.md).
+
+## This pillar
 
 | Axis | % | Note |
 |------|---:|------|
-| Charter + prereg | 35 | Kardashev framing needs explicit measurable milestones |
-| Layer A / nulls | 12 | Mostly scenario math; statistical nulls secondary |
-| Reproducibility | **41** | `runs/smoke.yaml` |
-| Domain data | 10 | Launch / catalog APIs not yet pinned |
+| Charter + prereg | 55 | `docs/PREREG.md` + `METHODS.md` |
+| Layer A / nulls | 34 | `tests/test_layer_a_permutation_smoke.py` + `notebooks/SMOKE_LAYER_A.ipynb` |
+| Reproducibility | 74 | `runs/smoke.yaml`, `methodology_preamble`, CI pytest |
+| Domain data | 32 | `datasets.yaml` Hub pins + `reference_streams` |
 
 ## Links
 
-- Skills: [Research-Apriori `skills/`](https://github.com/SVG-campus/Research-Apriori/tree/main/skills)
+- Preregistration template: [docs/PREREG.md](PREREG.md)
+- Methodology skills (exact code): [Research-Apriori `skills/`](https://github.com/SVG-campus/Research-Apriori/tree/main/skills)
+- Install: [CURSOR_SKILLS_INSTALL.md](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/CURSOR_SKILLS_INSTALL.md)

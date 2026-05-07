@@ -1,6 +1,6 @@
 version: 1
 pillar: research-space-systems
-title: "Space systems & Kardashev framing"
+title: "Space systems & orbits"
 streaming_preferred: true
 
 huggingface:
@@ -9,7 +9,19 @@ huggingface:
     split: train[:2%]
     streaming: true
     note: Tiny GLUE stream for CI / dataloader sanity — replace with domain datasets as charters land.
+  - repo_id: Salesforce/wikitext
+    config: wikitext-2-raw-v1
+    split: train[:1%]
+    streaming: true
+    note: Long-form text stream for tokenizer / retrieval smoke (not astrodynamics data).
 
 kaggle: []
 
-search_keywords: [satellite catalog, launch statistics, materials ISRU]
+
+search_keywords: []
+
+reference_streams:
+  - name: NASA data portal (reference)
+    url: https://data.nasa.gov/
+    note: Mission-specific feeds; verify dataset-specific license before mirroring.
+
