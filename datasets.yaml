@@ -13,7 +13,7 @@ huggingface:
     config: wikitext-2-raw-v1
     split: train[:1%]
     streaming: true
-    note: Long-form text stream for tokenizer / retrieval smoke (not astrodynamics data).
+    note: Pinned for `CHARTER_WIKITEXT_STREAM_SMOKE` CI + pytest stream smoke (long-text smoke only).
 
 kaggle: []
 
