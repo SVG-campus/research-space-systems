@@ -13,7 +13,9 @@ huggingface:
     config: wikitext-2-raw-v1
     split: train[:1%]
     streaming: true
-    note: Pinned for `CHARTER_WIKITEXT_STREAM_SMOKE` CI + pytest stream smoke (long-text smoke only).
+    note: >-
+      Pinned for `CHARTER_WIKITEXT_STREAM_SMOKE` CI + pytest stream smoke — long-text
+      streaming/dataloader sanity only (not astrodynamics, orbits, or trajectory evidence).
 
 kaggle: []
 
@@ -25,3 +27,7 @@ reference_streams:
     url: https://data.nasa.gov/
     note: Mission-specific feeds; verify dataset-specific license before mirroring.
 
+  # Next domain-native Hugging Face pins should target NASA- or space-physics-relevant HF
+  # datasets once license + streaming/read path are verified, or trajectory/ephemeris
+  # tables published in an explicit tabular/API form — do not add placeholder `repo_id`
+  # values ahead of confirmation.

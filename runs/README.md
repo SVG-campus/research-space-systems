@@ -20,4 +20,11 @@ Optional rows may set `enabled: false` so future charter notebooks stay listed w
 
 ## Promotion audit (canonical numbers)
 
-Template: [`runs/promotion_audit.example.yaml`](promotion_audit.example.yaml) — copy the `example_entry` shape when recording a promotion; fill **`commit_sha`** (`github.sha` in Actions, `git rev-parse HEAD` locally) and optional **`ci_run_url`**. Full gate: [meta `PROMOTION_CHECKLIST.md`](https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PROMOTION_CHECKLIST.md).
+Template: [`runs/promotion_audit.example.yaml`](promotion_audit.example.yaml) — copy the `example_entry` shape when recording a promotion; fill **`commit_sha`** (`github.sha` in Actions, `git rev-parse HEAD` locally) and optional **`ci_run_url`**. Full gate: [meta `PROMOTION_CHECKLIST.md`](https://github.com/SVG-campus/Research/blob/main/docs/PROMOTION_CHECKLIST.md).
+
+## Next validation (honest)
+
+- Prefer trajectory, ephemeris, engineering-telemetry, or mission-scale tabular/streaming datasets for the next heavyweight charter notebook; **`CHARTER_WIKITEXT_STREAM_SMOKE` remains long-text infra smoke**, not evidence for orbital or systems feasibility claims.
+- When a domain-native notebook is stable headless locally, **`FUTURE_CHARTER_SLOT`** in [`ci_notebooks.yaml`](ci_notebooks.yaml) should be swapped to that path and **`enabled: true`** only after verifying the notebook runs cleanly in CI.
+- Canonical promotion still requires **`runs/promotion_audit.example.yaml`–shaped audit entries**, **`trace_run_ids`** aligned with actual CI **`run_id` strings**, run cards/metric excerpts tied to promoted claims, and the meta gate in [`docs/PROMOTION_CHECKLIST.md`](https://github.com/SVG-campus/Research/blob/main/docs/PROMOTION_CHECKLIST.md).
+- Do **not** infer spacecraft, mission, or large-scale systems feasibility from wikitext or other generic NLP smoke; treat those notebooks as scaffolding until domain data pins land.

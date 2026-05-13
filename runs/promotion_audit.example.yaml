@@ -1,6 +1,9 @@
-# Schema-only example — see https://github.com/SVG-campus/Research-Apriori/blob/main/docs/PROMOTION_CHECKLIST.md
+# Schema-only example — see https://github.com/SVG-campus/Research/blob/main/docs/PROMOTION_CHECKLIST.md
 version: 1
 pillar: research-space-systems
+# trace_run_ids: slugs MUST match canonical `run_id` values emitted in notebook run cards /
+# notebooks `methodology_runs`/CI identifiers for the listed smoke charters — keep aligned
+# with `runs/ci_notebooks.yaml` and pytest expectations when renaming or promoting.
 trace_run_ids:
   - charter_layer_a_multidraw_smoke
   - charter_space_wikitext_stream_smoke
