@@ -1,27 +1,30 @@
-# Preregistration template — `research-space-systems`
-
+# Preregistration — `research-space-systems`
+ 
 **Pillar:** `research-space-systems`  
-**Title:** Space systems & orbits
+**Title:** Solar Flare Activity and Satellite Anomaly Causality (ECT-2026-007)
+**Date:** 2026-06-14  
+**ORCID Identifier:** `0009-0004-9601-5617`
 
 ## Charter (one paragraph)
 
-Optimize launch / orbit / energy budgets with physics-scoped truth_scope and scenario tables.
+Characterize the causal link between solar weather metrics (solar wind speed, proton flux) and satellite operational anomaly frequencies. This study investigates the causal influence of solar proton flux on telemetry anomaly counts, testing whether space weather indicators causally drive anomalies under propagation lags or if anomalies are driven by internal/spurious cycles, validated by OCCA's causal PC algorithms.
 
 ## Primary question (Layer A)
 
-- **Question:** _What measurable difference do we expect under the stated hypothesis?_
-- **Primary metric:** _e.g. mean delta, AUC, correlation, regret …_
-- **Direction / threshold:** _pre-specify sign or minimal effect size before peeking._
+- **Question:** Does solar proton flux (proton_flux) cause satellite telemetry anomalies (anomaly_count) under physical propagation lags?
+- **Expected DAG:** `proton_flux -> anomaly_count`
+- **Primary metric:** Discovered directed edges and information coefficient.
+- **Direction / threshold:** $\alpha = 0.05$ for PC algorithm. The discovered edge must be directed from proton flux to anomaly count, and the absolute correlation must exceed the phase-shuffled Spectral MC null ($p < 0.05$).
 
 ## Null / negative controls
 
-- **Null model:** _e.g. y-shuffle, permutation, time-shift, placebo instrument …_
-- **Caps:** read `runs/smoke.yaml` (`n_perm_max`, `n_boot_max`) for local smoke; raise only on Kaggle/HF Jobs with a new `run_id`.
+- **Null model:** Phase-shuffled Spectral Monte Carlo (FFT surrogate paths).
+- **Caps:** Capped at $N = 25$ runs for local smokes (`runs/smoke.yaml`); $N = 1000$ for full remote promotion validation with run ID `charter_space_solar_anomaly_run_01`.
 
 ## Truth scope & ethics
 
-- **Scope:** observational / simulated / scenario — _not_ universal causal claims unless design supports it.
-- **Data rights:** cite Hub/Kaggle dataset cards; no redistribution beyond their licenses.
+- **Scope:** Observational space weather and satellite telemetry data under the **ECT-2026** standard.
+- **Data rights:** NOAA space weather logs and satellite telemetry logs.
 
 ## Promotion rules
 
